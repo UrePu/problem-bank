@@ -11,6 +11,8 @@
  */
 
 function loginCheck(id, pw) {
+  if (id === "admin" && pw === "1234") return "success";
+  else return "fail";
   // TODO
 }
 
