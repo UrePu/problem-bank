@@ -11,7 +11,8 @@
  * @returns {number} - 계산된 총 금액
  */
 
-function calcTotal(price, quantity) {
+function calcTotal(price, quantity = 1) {
+  return price * quantity;
   //Todo
 }
 
