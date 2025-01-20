@@ -9,6 +9,11 @@
  */
 
 function delay(ms) {
+  return new Promise((res) =>
+    setTimeout(() => {
+      res("done");
+    }, ms)
+  );
   // TODO: delay 함수를 작성하세요.
 }
 

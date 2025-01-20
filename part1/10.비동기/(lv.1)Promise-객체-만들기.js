@@ -8,8 +8,12 @@
  * @type {Promise<string>}
  */
 
-let resolvePromise;
-let rejectPromise;
+let resolvePromise = new Promise((res) => {
+  res("Hello");
+});
+let rejectPromise = new Promise((_, rej) => {
+  rej("Error!");
+});
 
 // export를 수정하지 마세요.
 export { resolvePromise, rejectPromise };
