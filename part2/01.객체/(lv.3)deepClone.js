@@ -8,7 +8,22 @@
  * @returns {*} 깊은 복사된 결과
  */
 
-function deepClone(obj) {}
+function deepClone(obj) {
+  if (obj === null || typeof obj !== "object") {
+    return obj;
+  }
+
+  if (Array.isArray(obj)) {
+    return obj.map((item) => deepClone(item));
+  }
+
+  const clonedObj = {};
+  for (const key in obj) {
+    clonedObj[key] = deepClone(obj[key]);
+  }
+
+  return clonedObj;
+}
 
 // export 를 수정하지 마세요.
 export { deepClone };
