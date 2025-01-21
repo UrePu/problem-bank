@@ -16,6 +16,7 @@
 
 function createUserLogger() {
   let userLogs = new Map();
+  console.log("?");
 
   function recordUserAction(userId, action) {
     if (!userLogs.has(userId)) {
