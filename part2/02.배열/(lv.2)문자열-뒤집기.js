@@ -10,15 +10,10 @@
  */
 
 function reverseString(str) {
-  // 문자열이 아닌 경우 빈 문자열 반환
   if (typeof str !== "string") {
     return "";
   }
-
-  // 문자열을 뒤집기 위해 결과를 저장할 변수
   let reversed = "";
-
-  // 반복문을 사용하여 문자열 뒤집기
   for (let i = str.length - 1; i >= 0; i--) {
     reversed += str[i];
   }
