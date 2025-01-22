@@ -7,9 +7,9 @@
  *
  * @type {{ name: string, age: number, introduce: function(): string }}
  */
+
 const name = "철수";
 const age = 25;
-
 const person = {
   // TODO: introduce 메서드를 작성하세요.
   introduce() {

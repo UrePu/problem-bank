@@ -8,9 +8,7 @@ import { resolvePromise } from "./(lv.1)Promise-객체-만들기";
  * @returns {Promise<string>}
  */
 function returnHello() {
-  return new Promise((res) => {
-    res("Hello");
-  });
+  return resolvePromise();
 }
 // export를 수정하지 마세요.
 export { returnHello };
