@@ -32,6 +32,5 @@ function getFrequency(arr) {
 
   return Object.fromEntries(frequencyMap);
 }
-console.log(getFrequency([true, "true", 1, "1", 1]), "이거 맞아?");
 // export 를 수정하지 마세요.
 export { getFrequency };
