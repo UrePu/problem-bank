@@ -16,10 +16,23 @@
 let topKeywordsCache = [];
 
 function updateTopKeywords(keywords) {
+  topKeywordsCache = [];
+
+  const keyWordCount = keywords.reduce((acc, cur) => {
+    acc[cur] = (acc[cur] || 0) + 1;
+    return acc;
+  }, {});
+
+  const sortedKeyWord = Object.entries(keyWordCount)
+    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+    .map(([keyword]) => keyword);
+
+  topKeywordsCache = sortedKeyWord.slice(0, 10);
   // TODO
 }
 
 function getTopKeywords() {
+  return topKeywordsCache;
   // TODO
   return [];
 }
