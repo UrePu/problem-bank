@@ -19,7 +19,13 @@ const posts = [
   { id: 5, title: "Example" },
 ];
 
-function getPage(pageNumber, perPage) {}
+function getPage(pageNumber, perPage) {
+  // 페이지당 2개면 인덱스로 0 2 4 6
+  //페이지당 3개면 인덱스로 0 3 6
+  if (pageNumber < 1 || perPage < 1) return [];
+
+  return posts.slice((pageNumber - 1) * perPage, pageNumber * perPage);
+}
 
 // export 를 수정하지 마세요.
 export { getPage, posts };
